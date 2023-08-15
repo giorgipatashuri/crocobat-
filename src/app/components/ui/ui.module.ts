@@ -13,6 +13,6 @@ import { CardComponent } from './card/card.component';
     CommonModule
   ],
   providers:[RoutingService],
-  exports:[ButtonComponent,CirclesComponent]
+  exports:[ButtonComponent,CirclesComponent,CardComponent]
 })
 export class UiModule { }
