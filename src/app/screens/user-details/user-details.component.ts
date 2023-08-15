@@ -10,12 +10,15 @@ import { RoutingService } from 'src/app/services/routing.service';
   styleUrls: ['./user-details.component.scss']
 })
 export class UserDetailsComponent implements OnInit {
-  constructor(private api:ApiService,private routing:ActivatedRoute){}
-    userId:number| undefined
+  constructor(private actRouter:ActivatedRoute,private routing:RoutingService){}
     user:User | undefined
+
     ngOnInit() {
-      this.routing.data.subscribe(data => {
+      this.actRouter.data.subscribe(data => {
         this.user = data['user'];
       });
+    }
+    goToUserPosts(){
+      if(this.user) return this.routing.navigateToUserPosts(this.user.id)
     }
 }

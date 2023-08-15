@@ -1,23 +1,29 @@
-<div class="bg-secondaryTheme mt-5 rounded-lg shadow-md p-4 mx-auto md:max-w-lg lg:max-w-xl xl:max-w-2xl">
-    <h2 class="text-2xl font-semibold mb-4">{{ user?.name }}</h2>
-    <div class="mb-2">
-      <strong class="mr-2 ">Username:</strong> {{ user?.username || 'N/A' }}
+<div *ngIf="user" class="user_details">
+    <h2>{{ user.name }}</h2>
+    <div>
+      <strong>Username:</strong> {{ user.username  }}
     </div>
-    <div class="mb-2">
-      <strong class="mr-2 ">Email:</strong> {{ user?.email || 'N/A' }}
+    <div>
+      <strong>Email:</strong> {{ user.email  }}
     </div>
-    <div class="mb-2">
-      <strong class="mr-2 ">Phone:</strong> {{ user?.phone || 'N/A' }}
+    <div>
+      <strong>Phone:</strong> {{ user.phone  }}
     </div>
-    <div class="mb-2">
-      <strong class="mr-2 ">Website:</strong> {{ user?.website || 'N/A' }}
+    <div>
+      <strong>Website:</strong> {{ user.website  }}
     </div>
-    <div class="mb-2">
-      <strong class="mr-2 ">Address:</strong>
-      {{ user?.address?.street || 'N/A' }}, {{ user?.address?.suite || 'N/A' }}, {{ user?.address?.city || 'N/A' }} - {{ user?.address?.zipcode || 'N/A' }}
+    <div>
+      <strong>Address:</strong>
+      {{ user.address.street  }}, {{ user.address.suite  }}, {{ user.address.city  }} - {{ user.address.zipcode  }}
     </div>
-    <div class="mb-2">
-      <strong class="mr-2 ">Company:</strong> {{ user?.company?.name || 'N/A' }}
+    <div>
+      <strong>Company:</strong> {{ user.company.name  }}
     </div>
+    <div class="btn_wrapper">
+      <app-button (click)="goToUserPosts()">პოსტები</app-button>
+    </div>
+    
+    
   </div>
+
   

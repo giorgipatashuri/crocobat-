@@ -10,7 +10,7 @@ import { ApiService } from "src/app/services/api.service";
   export class UserDetailsResolver implements Resolve<User> {
     constructor(private api: ApiService) { }
   
-    resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+    resolve(route: ActivatedRouteSnapshot) {
       const userId = route.params['id'];
       return this.api.getUser(userId);
     }

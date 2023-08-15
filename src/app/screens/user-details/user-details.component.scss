@@ -1,0 +1,17 @@
+.user_details{
+    @apply bg-secondaryTheme mt-5 rounded-lg  shadow-md p-4  mx-auto w-4/5 md:w-1/2 lg:w-1/2;
+
+    h2{
+        @apply text-2xl font-semibold mb-4;
+    }
+    div{
+        @apply mb-2;
+
+        strong{
+            @apply mr-2;
+        }
+    }
+}
+.btn_wrapper{
+    @apply flex justify-end row-span-1
+}
