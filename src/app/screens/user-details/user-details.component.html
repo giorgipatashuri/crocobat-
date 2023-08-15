@@ -1,0 +1,23 @@
+<div class="bg-secondaryTheme mt-5 rounded-lg shadow-md p-4 mx-auto md:max-w-lg lg:max-w-xl xl:max-w-2xl">
+    <h2 class="text-2xl font-semibold mb-4">{{ user?.name }}</h2>
+    <div class="mb-2">
+      <strong class="mr-2 ">Username:</strong> {{ user?.username || 'N/A' }}
+    </div>
+    <div class="mb-2">
+      <strong class="mr-2 ">Email:</strong> {{ user?.email || 'N/A' }}
+    </div>
+    <div class="mb-2">
+      <strong class="mr-2 ">Phone:</strong> {{ user?.phone || 'N/A' }}
+    </div>
+    <div class="mb-2">
+      <strong class="mr-2 ">Website:</strong> {{ user?.website || 'N/A' }}
+    </div>
+    <div class="mb-2">
+      <strong class="mr-2 ">Address:</strong>
+      {{ user?.address?.street || 'N/A' }}, {{ user?.address?.suite || 'N/A' }}, {{ user?.address?.city || 'N/A' }} - {{ user?.address?.zipcode || 'N/A' }}
+    </div>
+    <div class="mb-2">
+      <strong class="mr-2 ">Company:</strong> {{ user?.company?.name || 'N/A' }}
+    </div>
+  </div>
+  
