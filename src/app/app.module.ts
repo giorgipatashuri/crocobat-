@@ -4,11 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { ButtonComponent } from './components/ui/button/button.component';
 import { UiModule } from './components/ui/ui.module';
 import { HomeComponent } from './screens/home/home.component';
 import { TableComponent } from './components/table/table.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UserDetailsComponent } from './screens/user-details/user-details.component';
+import { UserPostsComponent } from './screens/user-posts/user-posts.component';
 
 
 @NgModule({
@@ -17,6 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     HomeComponent,
     TableComponent,
+    UserDetailsComponent,
+    UserPostsComponent,
   ],
   imports: [
     UiModule,
